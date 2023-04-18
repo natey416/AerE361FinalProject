@@ -10,8 +10,10 @@ void setup() {
 void loop() {
   int delayTime = 100;
   // put your main code here, to run repeatedly:
-  int event = eventDetection(20,30);
+  int event = 0;
+  event = eventDetection(20,30);
   
-  }
+  
+  
   delay(delayTime);
 }
