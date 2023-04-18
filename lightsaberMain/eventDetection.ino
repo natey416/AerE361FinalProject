@@ -1,6 +1,3 @@
-#include <Adafruit_CircuitPlayground.h>
-#include <math.h>
-
 int eventDetection(int swipeStren,int hitStren) {
   /*
   eventDetection(x accel, y accel, z accel) as floats
@@ -30,19 +27,23 @@ int eventDetection(int swipeStren,int hitStren) {
 //  String printString = swipeMag + newLine;
 //  Serial.print(printString);
 
+  //swipe sound
   if (swipeMag > swipeStren && swipeMag< hitStren) {
     return 1;
   }
+  //clash sound
   else if (swipeMag >= hitStren) {
     return 2;
   }
-  //Y is stab
+  //stab swipe
   else if (Yaccel > swipeStren && Yaccel < hitStren) {
     return 3;
   }
+  //stab hit
   else if (Yaccel > hitStren) {
     return 4;
   }
+  //idle
   else {
     return 0;
   }
