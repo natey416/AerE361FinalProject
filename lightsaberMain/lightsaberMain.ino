@@ -5,22 +5,13 @@ void setup() {
   Serial.begin(9600);
   CircuitPlayground.begin();
   CircuitPlayground.setAccelRange(LIS3DH_RANGE_4_G);
-
 }
 
 void loop() {
-  int delayTime = 50;
+  int delayTime = 100;
   // put your main code here, to run repeatedly:
-  float Xaccel = CircuitPlayground.motionX();
-  float Yaccel = CircuitPlayground.motionY();
-  float Zaccel = CircuitPlayground.motionZ();
-  String xstr = "X: ";
-  String ystr = " Y: ";
-  String zstr = " Z: ";
-  String newline = "\n";
-  String outString = xstr+Xaccel+ystr+Yaccel+zstr+Zaccel+newline;
-  //Serial.print(outString);
-
-  hitDetection(Xaccel,Yaccel,Zaccel);
+  int event = eventDetection(20,30);
+  
+  }
   delay(delayTime);
 }
