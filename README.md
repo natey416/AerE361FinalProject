@@ -7,5 +7,5 @@
 
 [Prop sound effects with CircuitPlayground](https://learn.adafruit.com/sword-and-wand-prop-effects-with-circuit-playground/overview)
 
-
+[Neopixel Tutorial](https://learn.adafruit.com/adafruit-circuit-playground-express/circuitpython-neopixel)
 
